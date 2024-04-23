@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace DotEnv;
+namespace ToolKit;
 
 public class Env: IEnv
 {

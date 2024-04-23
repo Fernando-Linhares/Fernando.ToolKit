@@ -1,6 +1,6 @@
 using System;
 
-namespace DotEnv;
+namespace ToolKit;
 
 public class NotFoundEnvVariableException : Exception 
 {

@@ -1,8 +1,9 @@
-# DotEnv For Dotnet
+# ToolKit For Dotnet by Fernando L. Silvestre
 
 Simple and fast configuration of dotenv file for your web application follow this is steps to use in your project
 
-## EXAMPLE
+## DotEnv
+
 #### File Example
 .env.example
 
@@ -27,9 +28,11 @@ Apply you configurations vars
 
 #### Use class Env
 
-To get the env vars you can use the ```Env``` class.
+To get the env vars you can use the ```ToolKit.Env``` class.
 
-        var env = new DotEnv.Env();
+        using ToolKit;
+
+        var env = Env();
 
 Method used to get the variables ```Get```.
 
@@ -48,6 +51,30 @@ To override variables you can use the method ```Set```
 
 ### Configure file path
 
-Configure the file path passing in attribute ```DotEnvPath``` of object ```Env``` class.
+Configure the file path passing in attribute ```DotEnvPath``` of object ```ToolKit.Env``` class.
 
         env.DotEnvPath = "/path/to/file/.env"
+
+## Connection String
+
+You must use the class ```ToolKit.ConnectionString``` with a ```ToolKit.IEnv``` 
+
+###
+Example:
+
+        using ToolKit;
+
+        var env = new Env();
+
+        var connection = new ConnectionString(env);
+
+        Console.WriteLine(connection);
+
+        //outputs:  Server=[ENV_SERVER],[ENV_PORT];User Id=[ENV_USER];Password=[ENV_PASSWORD];Database=[ENV_DATABASE];Encrypt=True;Trusted_Connection=True;
+
+Or
+
+        connection.ToString()
+
+        // return: Server=[ENV_SERVER],[ENV_PORT];User Id=[ENV_USER];Password=[ENV_PASSWORD];Database=[ENV_DATABASE];Encrypt=True;Trusted_Connection=True;
+

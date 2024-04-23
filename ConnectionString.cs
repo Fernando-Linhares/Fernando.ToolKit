@@ -17,8 +17,7 @@ public class ConnectionString
 
         _text = $"Server={server},{port};User Id={uid};"
         + $"Password={psswd};Database={database};"
-        + $"Encrypt=True;Trusted_Connection=True;"
-        ;
+        + $"Encrypt=True;Trusted_Connection=True;";
     }
 
     override

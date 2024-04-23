@@ -6,16 +6,17 @@ Simple and fast configuration of dotenv file for your web application follow thi
 #### File Example
 .env.example
 
-        # APPLICATION
-        APP_VERSION=
-        APP_KEY=
-        APP_FOULDER=
+    # APPLICATION
+    APP_VERSION=
+    APP_KEY=
+    APP_FOULDER=
 
-        # DATABASE
-        DB_HOST=
-        DB_USER=
-        DB_PASSWORD=
-        DB_DATABASE=
+    # DATABASE
+    DB_HOST=
+    DB_PORT=
+    DB_USER=
+    DB_PASSWORD=
+    DB_DATABASE=
 
 
 ### Steps

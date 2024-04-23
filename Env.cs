@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace DotEnv;
 
-public class Env
+public class Env: IEnv
 {
     public static string DotEnvPath = ".env";
 

@@ -9,19 +9,18 @@ public class ConnectionString
 
     public ConnectionString(IEnv env)
     {
-        uid = env.Get("DB_USER");
-        server = env.Get("DB_HOST");
-        port = env.Get("DB_PORT");
-        psswd = env.Get("DB_PASSWORD");
-        database = env.Get("DB_DATABASE");
+        var uid = env.Get("DB_USER");
+        var server = env.Get("DB_HOST");
+        var port = env.Get("DB_PORT");
+        var psswd = env.Get("DB_PASSWORD");
+        var database = env.Get("DB_DATABASE");
 
         _text = $"Server={server},{port};User Id={uid};"
         + $"Password={psswd};Database={database};"
         + $"Encrypt=True;Trusted_Connection=True;";
     }
 
-    override
-    public string ToString()
+    public override string ToString()
     {
         return _text;
     }
